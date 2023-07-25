@@ -57,7 +57,7 @@ html {
 }
 
 .home {
-  background: var(--bg-color-500);
+  background: white;
 }
 
 .btn {
@@ -142,21 +142,16 @@ html {
 }
 
 .nav .nav-head {
-  flex: 0 0 30%;
-  width: 30%;
   float: left;
 }
 
 .nav .nav-body {
-  flex: 0 0 55%;
-  width: 55%;
   float: left;
   justify-content: flex-end;
   align-items: flex-end;
 }
 .nav .nav-end-btn {
-  flex: 0 0 15%;
-  width: 15%;
+ 
   float: left;
   display: flex;
   justify-content: center;
@@ -176,7 +171,7 @@ html {
 }
 
 .nav .nav-body .nav-body-list div {
-  line-height: 55px;
+  width: auto ;
   padding: 0 2%;
 }
 
@@ -186,7 +181,6 @@ html {
 }
 
 .nav .nav-body .nav-body-list div a {
-  color: var(--text-color-100);
   font-family: "Roboto Slab", serif;
   font-weight: 400;
   font-size: 15px;

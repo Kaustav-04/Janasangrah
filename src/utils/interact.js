@@ -4,6 +4,11 @@ import cfundingAbi from "../abi/CFunding.json";
 import votingfactoryAbi from "../abi/VotingFactory.json";
 import voteAbi from "../abi/Voting.json";
 
+const getConfirm = (msg) => {
+  const c = confirm(msg);
+  return c;
+}
+
 export const getBalance = async () => {
   const provider = new ethers.providers.Web3Provider(window.ethereum);
   const signer = provider.getSigner();
@@ -210,9 +215,7 @@ export const createNewCampaign = async (
     );
     return;
   } else if (stageSum < totalAmt) {
-    const c = confirm(
-      "Your total Stage fund is less than the total Amount, do you wan to continue? it may lead to unexpected consequences!"
-    );
+    const c = getConfirm("Your total Stage fund is less than the total Amount, do you wan to continue? it may lead to unexpected consequences!");
     if (!c) {
       alert("Request Cancelled!");
       return;

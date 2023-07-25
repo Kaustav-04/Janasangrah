@@ -11,18 +11,18 @@ import Flow from "../components/Flow";
 
 const HomePage = () => {
   const provider = useProvider();
-  const { address } = useAccount(provider);
+  // const { address } = useAccount(provider);
 
-  useEffect(() => {
-    console.log(`Address is ${address}`);
-  }, [address]);
+  // useEffect(() => {
+  //   console.log(`Address is ${address}`);
+  // }, [address]);
   return (
     <div>
       <Home />
-      <Mission />
-      <Flow />
-      <Working />
-      <Footer />
+      {/* <Mission /> */}
+      {/* <Flow /> */}
+      {/* <Working /> */}
+      {/* <Footer /> */}
     </div>
   );
 };

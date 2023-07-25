@@ -22,6 +22,11 @@ import { toast } from "react-hot-toast";
 import LoaderComponent from "../components/LoaderComponent";
 import Widget from "../components/Widget";
 
+const getConfirm = (msg) => {
+  const c = getConfirm(msg)
+  return c
+}
+
 const Campaign = () => {
   const campaignData = useLoaderData();
   const provider = useProvider();
@@ -249,7 +254,7 @@ const Campaign = () => {
                         toast.error("Insufficient Funds");
                         return;
                       }
-                      const confirmation = confirm(
+                      const confirmation = getConfirm(
                         "Confirm Release of the funds"
                       );
                       document.addEventListener("click", disableClick);
@@ -296,7 +301,7 @@ const Campaign = () => {
                 <div className="grid-100 campaign-funds">
                   <button
                     onClick={async () => {
-                      const confirmation = confirm(
+                      const confirmation = getConfirm(
                         "Confirm Cancellation, this will affect your future campaigns negatively"
                       );
                       document.addEventListener("click", disableClick);

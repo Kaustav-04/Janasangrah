@@ -3,10 +3,23 @@ import campaignAbi from "../abi/Campaign.json";
 import cfundingAbi from "../abi/CFunding.json";
 import votingfactoryAbi from "../abi/VotingFactory.json";
 import voteAbi from "../abi/Voting.json";
+import { Button, Modal, Space } from 'antd';
+import { ExclamationCircleFilled } from '@ant-design/icons';
+const { confirm } = Modal;
+
 
 const getConfirm = (msg) => {
-  const c = confirm(msg);
-  return c;
+  confirm({
+    title: 'Are you sure?',
+    icon: <ExclamationCircleFilled />,
+    content: msg,
+    onOk() {
+      return true;
+    },
+    onCancel() {
+      return false;
+    },
+  });
 }
 
 export const getBalance = async () => {

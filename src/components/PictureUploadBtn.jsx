@@ -1,11 +1,11 @@
-import { Cloudinary } from "@cloudinary/url-gen";
 import React, { useEffect } from "react";
 
 const PictureUploadBtn = ({ setImgUrl, imgUrl, disabled }) => {
   useEffect(() => {
     const cloudname = "ddzfucerv";
     const preset = "etbnphr9";
-    var uploadWidget = cloudinary.createUploadWidget(
+  
+    var uploadWidget = window.cloudinary.createUploadWidget(
       {
         cloudName: cloudname,
         uploadPreset: preset,

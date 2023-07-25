@@ -21,10 +21,23 @@ import { completeCampaign } from "../utils/interact";
 import { toast } from "react-hot-toast";
 import LoaderComponent from "../components/LoaderComponent";
 import Widget from "../components/Widget";
+import { Button, Modal, Space } from 'antd';
+import { ExclamationCircleFilled } from '@ant-design/icons';
+const { confirm } = Modal;
+
 
 const getConfirm = (msg) => {
-  const c = getConfirm(msg)
-  return c
+  confirm({
+    title: 'Are you sure?',
+    icon: <ExclamationCircleFilled />,
+    content: msg,
+    onOk() {
+      return true;
+    },
+    onCancel() {
+      return false;
+    },
+  });
 }
 
 const Campaign = () => {

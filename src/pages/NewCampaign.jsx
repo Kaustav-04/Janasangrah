@@ -91,32 +91,34 @@ const Form = () => {
               activeStep={0}
               showNavigation={true}
               steps={steps}
-              nextStyle={{
-                padding: "10px 15px",
-                borderRadius: "5px",
-                background: "var(--text-color-100)",
-                color: "var(--bg-color-500)",
-                fontSsize: "15px",
-                fontWeight: "600",
-                border: "1px solid var(--bg-color-500)",
-                transition: "all 0.3s ease",
-                fontFamily: '"Roboto Slab",serif',
-                cursor: "pointer",
-                margin: "0 90%",
-              }}
-              prevStyle={{
-                padding: "10px 15px",
-                borderRadius: "5px",
-                background: "var(--text-color-100)",
-                color: "var(--bg-color-500)",
-                fontSsize: "15px",
-                fontWeight: "600",
-                border: "1px solid var(--bg-color-500)",
-                transition: "all 0.3s ease",
-                fontFamily: '"Roboto Slab",serif',
-                cursor: "pointer",
-                position: "absolute",
-              }}
+              nextButton={{title: 'Next', style: {backgroundColor: '#5F6FDD', borderWidth: '2px', color: '#ffffff', padding: '7px',borderRadius: '8px'}}}
+              prevButton={{title: 'Prev', style: {display: "none"}}}
+              // nextStyle={{
+              //   padding: "10px 15px",
+              //   borderRadius: "5px",
+              //   background: "var(--text-color-100)",
+              //   color: "var(--bg-color-500)",
+              //   fontSsize: "15px",
+              //   fontWeight: "600",
+              //   border: "1px solid var(--bg-color-500)",
+              //   transition: "all 0.3s ease",
+              //   fontFamily: '"Roboto Slab",serif',
+              //   cursor: "pointer",
+              //   margin: "0 90%",
+              // }}
+              // prevStyle={{
+              //   padding: "10px 15px",
+              //   borderRadius: "5px",
+              //   background: "var(--text-color-100)",
+              //   color: "var(--bg-color-500)",
+              //   fontSsize: "15px",
+              //   fontWeight: "600",
+              //   border: "1px solid var(--bg-color-500)",
+              //   transition: "all 0.3s ease",
+              //   fontFamily: '"Roboto Slab",serif',
+              //   cursor: "pointer",
+              //   position: "absolute",
+              // }}
               stepCustomStyle={{
                 color: "var(--bg-color-500)",
                 fontWeight: "600",

@@ -2,16 +2,21 @@ import React from "react";
 import Navbar from "./Navbar";
 import crowdfunding from "../img/crowdfunding.png";
 import { FaSpaceShuttle, FaTwitter, FaLinkedin } from "react-icons/fa";
-import {BsArrowRight} from 'react-icons/bs';
+import { BsArrowRight } from "react-icons/bs";
 
 const Tabs = (props) => {
-  return(
-    <div className={`text-white bg-[#${props.bg}] mr-3 w-full flex flex-col justify-between items-start p-3 h-[150px] rounded-lg`}>
+  return (
+    <div
+      className={`text-white bg-[${props.bg}] mr-3 w-1/2 flex flex-col justify-between items-start p-3 h-[150px] rounded-lg`}
+    >
       <span className="text-xl">{props.text}</span>
-      <span className="flex items-center">Learn More<BsArrowRight className="ml-2"/></span>
+      <span className="flex items-center">
+        Learn More
+        <BsArrowRight className="ml-2" />
+      </span>
     </div>
-  )
-}
+  );
+};
 
 const Home = () => {
   return (
@@ -37,8 +42,16 @@ const Home = () => {
             project creators and backers.
           </div>
           <div className="flex justify-between item-center w-full">
-            <Tabs text={'Start a Project'} bg={'1AD079'}/>
-            <Tabs text={'Ongoing Project'} bg={'07133B'}/>
+            <div
+              className={`text-white bg-[#1AD079] mr-3 w-1/2 flex flex-col justify-between items-start p-3 h-[150px] rounded-lg`}
+            >
+              <span className="text-xl">{'Start a Project'}</span>
+              <span className="flex items-center">
+                Learn More
+                <BsArrowRight className="ml-2" />
+              </span>
+            </div>
+            <Tabs text={"Ongoing Project"} bg={"#07133B"} />
           </div>
         </div>
       </div>
